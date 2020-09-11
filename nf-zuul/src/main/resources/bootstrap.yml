@@ -1,0 +1,17 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: nf-zuul
+  cloud:
+    config:
+      name: neo-config
+      profile: dev
+      discovery:
+        service-id: baoleme-config
+        enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
